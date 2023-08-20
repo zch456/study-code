@@ -187,7 +187,7 @@
 //3. 在一个有序数组中查找具体的某个数字n。（讲解二分查找）
 //4. 编写代码，演示多个字符从两端移动，向中间汇聚。
 //5.编写代码实现，模拟用户登录情景，并且只能登录三次。（只允许输入三次密码，如果密码正确则
-//提示登录成，如果三次均输入错误，则退出程序。
+//提示登录成功，如果三次均输入错误，则退出程序。
 
 //1.
 //错误答案
@@ -284,3 +284,83 @@
 //	printf("%d\n", sum);
 //	return 0;
 //}
+
+//3:
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;//这里减一是因为数组下标比实际值小一
+//	int key = 0;
+//	int mid = 0;
+//	scanf("%d", &key);
+//	while (left <= right)
+//	{
+//		mid = (left + right) / 2;//这里不能加int,这里括号要加在/前面
+//		if (key < arr[mid])//这里应该是arr[mid]，不能只写mid
+//			right = mid - 1;
+//		else if (key > arr[mid])//这里记得是else if,不要写成if
+//			left = mid + 1;
+//		else
+//			break;
+//	}
+//	if (left <= right)
+//		printf("找到了,它的下标是:%d\n", mid);
+//	else
+//		printf("找不到\n");
+//	return 0;
+//}
+//思路:
+//要在有序数组中找一个数 n ，最快的方法是二分查找。
+//即先找中间值，然后在用中间值和 n 比较，看大还是小。
+//求中间值的方法，要把最左边的序号与最右边的序号相加处除2
+//如果中间值大，就将右边的值减一，继续比较。然后循环。
+
+//4:
+#include<stdlib.h>//sysytem语句需要使用
+#include<windows.h>//Sleep语句需要使用
+//int main()
+//{
+//	char arr1[] =  "welcome to bit" ;
+//	char arr2[] =  "##############" ;
+//	int left = 0;
+//	int right = strlen(arr1)-1;//这里记得要减一
+//	while (left <= right)
+//	{
+//		arr2[left] = arr1[left];
+//		arr2[right] = arr1[right];
+//		printf("%s\n",arr2);
+//		Sleep(500);//s要大写
+//		system("cls");//清理屏幕的作用
+//		left++;
+//		right--;
+//	}
+//	printf("%s\n", arr1);	
+//	return 0;
+//}
+
+//5:
+#include<string.h>//strcmp语句需要使用
+//int main()
+//{
+//	int a = 0;
+//	char password[20] = { 0 };
+//	for (a = 0; a < 3; a++)//最多输入三次密码
+//	{
+//		printf("请输入密码:");
+//		scanf("%s", password);
+//		if (strcmp(password, "abcdef") == 0)//设置密码为abcdef
+//		{
+//			printf("登录成功\n");
+//			break;
+//		}
+//		else
+//			printf("密码错误\n");
+//	}
+//	if (a == 3)
+//		printf("三次密码均输入错误，退出程序\n");
+//	return 0;
+//}
+//如果比较两个字符串是否相等，不能使用==，而应该使用一个库函数:strcmp
+//如果返回值是0，表示两个字符串相等
+
