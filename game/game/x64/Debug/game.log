@@ -1,0 +1,4 @@
+﻿  game.c
+E:\Microsoft Visual studio\学习记录\game\game\game.c(19,15): warning C4013: “rand”未定义；假设外部返回 int
+E:\Microsoft Visual studio\学习记录\game\game\game.c(43,5): warning C4013: “srand”未定义；假设外部返回 int
+  game.vcxproj -> E:\Microsoft Visual studio\学习记录\game\x64\Debug\game.exe
