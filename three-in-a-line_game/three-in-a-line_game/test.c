@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
 #include"game.h"
 void menu()
 {
@@ -13,9 +12,13 @@ void game()
 {
 	char board[ROW][COL] = { 0 };//创建一个棋盘
 	InitBoard(board, ROW, COL); //初始化棋盘的函数
-	DisplayBoard(board,ROW,COL);
-
-
+	DisplayBoard(board,ROW,COL);//不初始化棋盘会错位
+	//下棋
+	while (1)
+	{
+		PlayerMove(board,ROW,COL);
+		DisplayBoard(board, ROW, COL);
+	}
 }
 
 int main()
