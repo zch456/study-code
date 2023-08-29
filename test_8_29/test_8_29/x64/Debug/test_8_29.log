@@ -1,0 +1,4 @@
+﻿  test_8_29.c
+E:\Microsoft Visual studio\学习记录\test_8_29\test_8_29\test_8_29.c(98,17): warning C4554: “&”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
+E:\Microsoft Visual studio\学习记录\test_8_29\test_8_29\test_8_29.c(106,5): warning C4552: ”>>“: 未使用表达式结果
+  test_8_29.vcxproj -> E:\Microsoft Visual studio\学习记录\test_8_29\x64\Debug\test_8_29.exe
