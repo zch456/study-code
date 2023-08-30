@@ -88,26 +88,80 @@
 //	return 0;
 //}
 
-int main()
-{
-	int a = 3;
-	int n = 0;
-	int count = 0;
-	for (n = 1; n <= 32; n++)
-	{
-		if (a & 1 == 1)
-		{
-			count++;
-		}
-		else
-		{
-			continue;
-		}
-		a >> 1;
-	}
-	printf("%d\n", count);
-	return 0;
-}
+//编写代码实现：求一个整数存储在内存中的二进制中1的个数
+//int main()
+//{
+//	int a = 3;
+//	int n = 0;
+//	int count = 0;
+//	for (n = 1; n <= 32; n++)
+//	{
+//		if (a & 1 == 1)
+//			count++;
+//		a = a >> 1;//这里不加a=结果就会一直是32
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int num = 15;
+//	int count = 0;//计数
+//	while (num)
+//	{
+//		if (num % 2 == 1)
+//			count++;
+//		num = num / 2;
+//	}
+//	printf("二进制中1的个数 = %d\n", count);
+//	return 0;
+//}
+//15的二进制为1111
+//7的二进制为111
+//3的二进制为11
+//1的二进制为1
+//每次除二的整数二进制都少一位
+//但是这种方法不能计算负数
+
+//printf("%d\n", sizeof(a));//行
+//printf("%d\n", sizeof(int));//行
+//printf("%d\n", sizeof a);//这样写行
+//printf("%d\n", sizeof int);//这样写不行
+//sizeof是操作符，不是函数
+
+//void test1(int arr[])
+//{
+//	printf("%d\n", sizeof(arr));//8(x64环境指针大小为8)
+//}
+//void test2(char ch[])
+//{
+//	printf("%d\n", sizeof(ch));//8
+//}
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	char ch[10] = { 0 };
+//	printf("%d\n", sizeof(arr));//40(一个整形4字节)
+//	printf("%d\n", sizeof(ch));//10(一个字符1字节)
+//	test1(arr);
+//	test2(ch);
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
