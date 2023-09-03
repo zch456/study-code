@@ -1,3 +1,2 @@
 ﻿  test_8_29.c
-E:\Microsoft Visual studio\学习记录\test_8_29\test_8_29\test_8_29.c(1,1): warning C4828: 文件包含在偏移 0xc84 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
   test_8_29.vcxproj -> E:\Microsoft Visual studio\学习记录\test_8_29\x64\Debug\test_8_29.exe
