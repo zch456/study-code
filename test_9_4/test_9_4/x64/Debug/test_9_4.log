@@ -1,0 +1,11 @@
+﻿  test_9_4.c
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(33,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(33,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(34,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(34,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(35,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(35,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(36,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(36,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
+E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(32,8): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
+  test_9_4.vcxproj -> E:\Microsoft Visual studio\学习记录\test_9_4\x64\Debug\test_9_4.exe
