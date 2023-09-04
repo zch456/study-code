@@ -13,7 +13,7 @@
 //10000000000000000000000000000111 源码
 //11111111111111111111111111111000(符号位不变，其他位取反)反码
 //11111111111111111111111111111001(反码+1就是补码)
-//整数在内存中存储的是补码
+//整数在内存中存储的是补码，输出的是源码
 
 //int main()
 //{
@@ -240,3 +240,90 @@
 //所以arr[9]也可以写成9[arr]
 //同理也可以写成*(arr+7),定位某个元素的时候可以，定义的时候不行
 
+#include<string.h>
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//	double score;
+//};
+//
+//void set_stu(struct Stu* ps)//因为这里是形参，赋值需要指针来指向实参
+//{
+//	//strcpy((*ps).name, "zhangsan");
+//	//(*ps).age = 20;
+//	//(*ps).score = 100.0;
+//	strcpy(ps->name, "zhangsan");//这就是两种访问结构体成员的方式
+//	(ps->age = 20);
+//	(ps->score = 100.0);
+//}
+//
+//void print_stu(struct Stu ss)//这里不需要对实参进行改变，所以不用指针
+//{
+//	printf("%s %d %lf", ss.name, ss.age, ss.score);
+//}
+//
+//
+//int main()
+//{
+//	struct Stu s = { 0 };
+//	set_stu(&s);
+//	print_stu(s);
+//	return 0;
+//}
+
+//所以ps->name等价于(*ps).name
+
+//隐式类型转换--整型提升
+//当一个数据内存不足四个字节也就是一个整形时，他会进行整形提升
+//也就是取补码的最后八个数字，然后以最高位为符号位，补充为四个字节
+//int main()
+//{
+//	char a = 5;
+//	//00000000000000000000000000000101 - 补码
+//	//00000101 - a
+//	char b = 125;
+//	//00000000000000000000000001111110 - 补码
+//	//01111110 - b
+//	char c = a + b;
+//	//10000011 - a+b
+//	//10000000000000000000000001111101 - 源码
+//	printf("%d\n", c);//输出结果为-126
+//	return 0;
+//}
+
+//int main()
+//{
+//	char a = 0xb6;
+//	short b = 0xb600;
+//	int c = 0xb6000000;
+//	if (a == 0xb6)
+//		printf("a");
+//	if (b == 0xb600)
+//		printf("b");
+//	if (c == 0xb6000000)
+//		printf("c");
+//	return 0;
+//}
+//输出结果为c
+
+//int main()
+//{
+//	char c = 1;
+//	printf("%u\n", sizeof(c));//1
+//	printf("%u\n", sizeof(+c));//4
+//	printf("%u\n", sizeof(-c));//4
+//	return 0;
+//}
+//只要参与运算，c就会发生整型提升
+
+//算数转换
+//超过一个整形的数据，且操作符两边的数据类型不同时，进行算术转化
+//遵循向上转化
+//long double
+//double
+//float
+//unsigned long int
+//long int
+//unsigned int
+//int
