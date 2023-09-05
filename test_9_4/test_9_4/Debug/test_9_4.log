@@ -1,3 +1,1 @@
-﻿  test_9_4.c
-E:\Microsoft Visual studio\学习记录\test_9_4\test_9_4\test_9_4.c(49,9): warning C4133: “初始化”: 从“int *”到“float *”的类型不兼容
-  test_9_4.vcxproj -> E:\Microsoft Visual studio\学习记录\test_9_4\Debug\test_9_4.exe
+﻿LINK : fatal error LNK1104: 无法打开文件“E:\Microsoft Visual studio\学习记录\test_9_4\Debug\test_9_4.exe”

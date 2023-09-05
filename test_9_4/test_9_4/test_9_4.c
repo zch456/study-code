@@ -69,8 +69,90 @@
 //{
 //	int a = 0;
 //	int* p = NULL;
+//	//*p = 100;//这样写是错误的，因为零地址不能访问
+//	if (*p != NULL)
+//	{
+//		*p = 100;
+//	}//这样就可以使用了
 //	return 0;
 //}
+
+//int* test()
+//{
+//	int a = 10;
+//	return &a;
+//}
+//
+//int main()
+//{
+//	int* p = test();
+//	printf("hehe\n");//当局部变量被销毁之后，没有任何操作时
+//	//指针指向的值仍然与之前相同(空间中的值未被覆盖)
+//	if (*p != NULL)
+//	{
+//		printf("%d\n", *p);
+//	}
+//	return 0;
+//}
+
+//指针+-整数；指针的关系运算
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		arr[i] = 1;
+//	}
+//	return 0;
+//}//数组下标的写法
+
+//int main()
+//{
+//	
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	int* p = arr;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		*p++ = 1;//*(p + i = 1)效果一样
+//	}
+//	return 0;
+//}//指针计算的写法
+
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	printf("%d\n", &arr[9] - &arr[0]);//结果为9
+//	return 0;
+//}
+//指针相减结果是两个指针之间的元素数量
+//用处:可以求字符串长度等
+
+//int my_strlen(char* str)
+//{
+//	char* start = str;
+//	while (*str != '\0')
+//	{
+//		str++;
+//	}
+//	return (str - start);
+//}
+//
+//int main()
+//{
+//	int len = my_strlen("abcdef");
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+int main()
+{
+	printf("hehe\n");
+	return 0;
+}
 
 
 
