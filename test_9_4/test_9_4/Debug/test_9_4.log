@@ -1,1 +1,2 @@
-﻿LINK : fatal error LNK1104: 无法打开文件“E:\Microsoft Visual studio\学习记录\test_9_4\Debug\test_9_4.exe”
+﻿  test_9_4.c
+  test_9_4.vcxproj -> E:\Microsoft Visual studio\学习记录\test_9_4\Debug\test_9_4.exe

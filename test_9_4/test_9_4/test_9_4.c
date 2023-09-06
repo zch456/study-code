@@ -5,6 +5,16 @@
 //{
 //	int a = 10;
 //	int* p = &a;
+//	printf("%d", *p);
+//	return 0;
+//}
+//当在变量前加一个*时，这个变量成为了指针变量
+//使用时加*会指向地址所储存的对象 
+
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
 //	return 0;
 //}
 
@@ -148,19 +158,101 @@
 //	return 0;
 //}
 
-int main()
-{
-	printf("hehe\n");
-	return 0;
-}
+//int main()
+//{
+//	int values[5];
+//	int* vp = &values;
+//	for (vp = &values[5]; vp > &values[0];)//不能>5
+//	{//vp前面不能带*
+//		*--vp = 0;//这里应该是先--再取地址
+//	}
+//	return 0;
+//}
+//这里for循环的条件就用了指针的关系比较
 
+//简化版本:
+//for(vp = &values[4]; vp >= &values[0];vp--)
+//{
+//	*vp = 0;
+//}
+//这段代码最后vp会指向values数组的前一个地址，这是错误的
+//实际在绝大部分的编译器上是可以顺利完成任务的，然而我们还是应该避免这样写
+//因为标准并不保证它可行
+//标准规定：
+//允许指向数组元素的指针与指向数组最后一个元素后面的那个内存位置的指针比较
+//但是不允许与指向第一个元素之前的那个内存位置的指针进行比较
 
+//int main()
+//{
+//    int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//    printf("%p\n", arr);
+//    printf("%p\n", &arr[0]);
+//    return 0;
+//}
 
+//两个的输出结果一样
 
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%p--------%p\n", &arr[i], p + i);
+//	}
+//	return 0;
+//}
 
+//数组与指针类似
+//数组名表示的是数组首元素的地址
+//p存放的是数组首元素的地址
+//所以 p+i 其实计算的是数组 arr 下标为i的地址
 
+//那我们就可以直接通过指针来访问数组，如下:
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//	int* p = arr;
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d\n", *(p + i));//这里必须是%d，不能是%p
+//	}
+//	return 0;
+//}
 
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
+//	int** pp = &p;
+//	printf("%d %d %d", a, *p, **pp);
+//	return 0;
+//}
+//int* p
+//int 表示指针指向的类型是整形，*表示p是指针变量，p是变量名
+//int**pp
+//int*表示指针指向的类型是指针变量，*表示pp是指针变量，pp是变量名
+//这里的pp就是二级指针
 
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int c = 30;
+//	int* parr[3] = { &a,&b,&c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%d ", *(parr[i]));
+//	}
+//	return 0;
+//}
+
+//指针数组
 
 
 
