@@ -1,4 +1,2 @@
 ﻿  test_9_8.c
-E:\Microsoft Visual studio\学习记录\test_9_8\test_9_8\test_9_8.c(28,56): error C2078: 初始值设定项太多
-E:\Microsoft Visual studio\学习记录\test_9_8\test_9_8\test_9_8.c(28,13): warning C4047: “初始化”:“int”与“char [5]”的间接级别不同
-E:\Microsoft Visual studio\学习记录\test_9_8\test_9_8\test_9_8.c(28,37): error C2078: 初始值设定项太多
+  test_9_8.vcxproj -> E:\Microsoft Visual studio\学习记录\test_9_8\Debug\test_9_8.exe
