@@ -271,7 +271,7 @@
 //	print_stu(s);
 //	return 0;
 //}
-
+//
 //所以ps->name等价于(*ps).name
 
 //隐式类型转换--整型提升
@@ -291,7 +291,7 @@
 //	printf("%d\n", c);//输出结果为-126
 //	return 0;
 //}
-
+//
 //int main()
 //{
 //	char a = 0xb6;
@@ -306,7 +306,7 @@
 //	return 0;
 //}
 //输出结果为c
-
+//
 //int main()
 //{
 //	char c = 1;
