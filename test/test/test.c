@@ -1,76 +1,159 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+
+//闰年判断规则:
+//1.能被4整除且不能被100整除
+//2.能被400整除
+
+//int is_leap_year(int a)
+//{
+//	if (a % 4 == 0 && a % 100 != 0)
+//	{
+//		return 1;
+//	}
+//	else if (a % 400 == 0)
+//	{
+//		return 1;
+//	}
+//	else
+//		return 0;
+//}
+//
 //int main()
 //{
 //	int a = 0;
-//	int b = 0;
-//	scanf("%d", &a);//这里加上\n就出错了
-//	b = a / 100 + (a % 100) / 10 * 10 + (a % 100) % 10 * 100;
-//	printf("%d\n", b);
-//	return 0;
-//}
-
-//int main()
-//{
-//	int i, j, k;
-//	i = 5; j = 10; k = 1;
-//	printf("%d", k > i < j);//k>i是假，为0,0<10为真，为1，所以输出1
-//	return 0;
-//}
-
-//int main()
-//{
-//	int i, j, k;
-//	i = 3; j = 2; k = 1;
-//	printf("%d", i < j == j < k);
-//	return 0;//i<j为0，j<k为0,0==0为1，所以输出1
-//}
-
-//int main()
-//{
-//	int i = 0;
-//
-//	//for (i = 0; i < 10; i++)
-//	for (i = 0; i < 10; ++i)
-//	//for (i = 0; i++ < 10; )//这个和前两个不等价
+//	int year, month, day;
+//	scanf("%d,%d,%d", &year, &month, &day);
+//	if (is_leap_year(year))
 //	{
-//		printf("%d\n", i);
+//		switch (month)
+//		{
+//		case 1:
+//			a = day;
+//			break;
+//		case 2:
+//			a = 31 + day;
+//			break;
+//		case 3:
+//			a = 31 + 28 + day;
+//			break;
+//		case 4:
+//			a = 31 + 28 + 30 + day;
+//			break; 
+//		case 5:
+//			a = 31 + 28 + 30 + 31 + day;
+//			break; 
+//		case 6:
+//			a = 31 + 28 + 30 + 31 + 30 + day;
+//			break; 
+//		case 7:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + day;
+//			break; 
+//		case 8:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + 31 + day;
+//			break; 
+//		case 9:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+//			break; 
+//		case 10:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+//			break; 
+//		case 11:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+//			break;
+//		case 12:
+//			a = 31 + 28 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + day;
+//			break;
+//		default:
+//			break;
+//    	}
 //	}
+//	else
+//	{
+//		switch (month)
+//		{
+//		case 1:
+//			a = day;
+//			break;
+//		case 2:
+//			a = 31 + day;
+//			break;
+//		case 3:
+//			a = 31 + 29 + day;
+//			break;
+//		case 4:
+//			a = 31 + 29 + 30 + day;
+//			break;
+//		case 5:
+//			a = 31 + 29 + 30 + 31 + day;
+//			break;
+//		case 6:
+//			a = 31 + 29 + 30 + 31 + 30 + day;
+//			break;
+//		case 7:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + day;
+//			break;
+//		case 8:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + 31 + day;
+//			break;
+//		case 9:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+//			break;
+//		case 10:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+//			break;
+//		case 11:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+//			break;
+//		case 12:
+//			a = 31 + 29 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + day;
+//			break;
+//		default:
+//			break;
+//		}
+//	}
+//	printf("%d\n", a);
 //	return 0;
 //}
 
+//数字排序（从小到大）：
+
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d %d %d", &a, &b, &c);
+//	if (a > b)
+//	{
+//		a = a + b;
+//		b = a - b;
+//		a = a - b;
+//	}
+//	if (b > c)
+//	{
+//		b = b + c;
+//		c = b - c;
+//		b = b - c;
+//	}//输入为5 3 1时，输出为3 1 5
+//	//可以再次判断a和b的值
+//	printf("%d %d %d", a, b, c);
+//	return 0;
+//}
+
+////打印九九乘法表
+//
 //int main()
 //{
 //	int i = 0;
 //	int j = 0;
-//	scanf("%d", &j);
-//	for (i = 1; i < j; i += 2)
+//	for (i = 1; i <= 9; i++)
 //	{
-//		printf("%d ", i);
+//		for (j = 1; j <= i; j++)
+//		{//只有j<=i才会输出2*1，2*2之类的，否则就是1*2 1*3 1*4一直往后循环
+//			printf("%d*%d=%d ", i, j, i * j);
+//		}
+//		printf("\n");
 //	}
 //	return 0;
 //}
 
-//int main()
-//{
-//	int i = 1;
-//	switch (i % 3) 
-//	{
-//	case 0: printf("zero");
-//	case 1: printf("one");
-//	case 2: printf("two");
-//	}
-//	return 0;
-//}//输出onetwo，因为分支后面没有break
-
-int main()
-{
-	int arr[] = { 0 };
-	int a = 0;
-	for (a = 0; a <= 200; a++);
-
-
-
-	return 0;
-}
 
