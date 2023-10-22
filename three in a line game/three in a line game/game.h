@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define ROW 3
+#define COL 3//方便修改棋盘的行列
+
+//初始化棋盘
+void InitBoard(char board[ROW][COL], int row, int col);
+//打印棋盘
+void DisplayBoard(char board[ROW][COL], int row, int col);
+
+
+
