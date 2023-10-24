@@ -1,3 +1,2 @@
-﻿test.obj : error LNK2019: 无法解析的外部符号 PlayerMove，函数 game 中引用了该符号
-test.obj : error LNK2019: 无法解析的外部符号 ComputerMove，函数 game 中引用了该符号
-E:\Microsoft Visual studio\学习记录\three in a line game\x64\Debug\three in a line game.exe : fatal error LNK1120: 2 个无法解析的外部命令
+﻿  game.c
+  three in a line game.vcxproj -> E:\Microsoft Visual studio\学习记录\three in a line game\x64\Debug\three in a line game.exe

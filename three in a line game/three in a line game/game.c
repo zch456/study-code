@@ -52,6 +52,39 @@ void DisplayBoard(char board[ROW][COL], int row, int col)
 	}
 }
 
+void PlayerMove(char board[ROW][COL], int row, int col)
+{
+	int x, y;
+	printf("玩家下棋\n");
+	while (1)//判断坐标是否合法
+	{
+		printf("请输入坐标：\n");
+		scanf("%d %d", &x, &y);
+		if (x >= 1 && y >= 1 && x <= row && y <= col)
+		{
+			if (board[x - 1][y - 1] == ' ')
+			{
+				board[x - 1][y - 1] = '*';
+				break;//不加break就无法打印棋盘
+			}
+			else
+			{
+				printf("坐标被占用，请重新输入：\n");
+			}
+		}
+		else
+		{
+			printf("坐标错误，请重新输入：\n");
+		}
+	}
+}
+
+void ComputerMove(board, ROW, COL);
+{
+
+
+
+}
 
 
 

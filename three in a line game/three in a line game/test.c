@@ -19,10 +19,8 @@ void game()
 	{
 		PlayerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-		ComputerMove(board,ROW,COL);
+		ComputerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-
-
 	}
 }
 
