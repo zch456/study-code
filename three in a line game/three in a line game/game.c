@@ -65,7 +65,7 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 			if (board[x - 1][y - 1] == ' ')
 			{
 				board[x - 1][y - 1] = '*';
-				break;//不加break就无法打印棋盘
+				break;//不加break就无法退出循环
 			}
 			else
 			{
@@ -79,14 +79,63 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 	}
 }
 
-void ComputerMove(board, ROW, COL);
+void ComputerMove(char board[ROW][COL], int row, int col)
 {
-
-
-
+	printf("电脑下棋：\n");
+	int x, y;
+	while (1)
+	{
+		x = rand() % row;//使得随机数为0~2
+		y = rand() % col;
+		if (board[x][y] == ' ')
+		{
+			board[x][y] = '#';
+			break;
+		}
+	}
 }
 
+int IsFull(char board[ROW][COL], int row, int col)
+{
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < row; i++)
+	{
+		for (j = 0; j < col; j++)
+		{
+			if (board[i][j] == ' ')
+				return 0;
+		}
+	}
+	return 1;
+}
 
+char Iswin(char board[ROW][COL], int row, int col)
+{
+	int i = 0;
+	for (i = 0; i < row; i++)//行
+	{
+		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
+		{
+			return board[i][0];
+		}
+	}
+	for (i = 0; i < col; i++)//列
+	{
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[2][i] != ' ')
+			return board[0][i];
+	}
+	if (board[0][0] == board[1][1] && board[2][2] == board[1][1] && board[2][2] != ' ')
+	{//对角线
+		return board[0][0];
+	}
+	//平局
+	if (IsFull(board, row, col))
+	{
+		return 'q';
+	}
+	return 'c';//返回字符要加 ''
+}
 
 
 

@@ -11,6 +11,7 @@ void menu()
 
 void game()
 {
+	char ret = 0;
 	char board[ROW][COL] = { 0 };
 	//初始化棋盘的函数（将数组里面的元素修改）
 	InitBoard(board, ROW, COL);//为什么是大写ROW和COL
@@ -18,15 +19,38 @@ void game()
 	while (1)
 	{
 		PlayerMove(board, ROW, COL);
+		ret = Iswin(board, ROW, COL);
+		if (ret != 'c')
+		{
+			break;
+		}
 		DisplayBoard(board, ROW, COL);
 		ComputerMove(board, ROW, COL);
+		ret = Iswin(board, ROW, COL);
+		if (ret != 'c')
+		{
+			break;
+		}
 		DisplayBoard(board, ROW, COL);
 	}
+	if (ret == '*')
+	{
+		printf("玩家赢了！\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢了！\n");
+	}
+	else
+	{
+		printf("平局！\n");
+	}
+	DisplayBoard(board, ROW, COL);
 }
 
 int main()
-
 {
+	srand((unsigned int)time(NULL));//设置随机数生成的起点
 	int input = 0;
 	do
 	{
