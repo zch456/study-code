@@ -273,9 +273,22 @@
 //	return 0;
 //}
 
-
-
-
-
+//函数指针是指向函数的指针变量
+//函数指针可以像一般函数一样，用于调用函数，传递参数
+//int MAX(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	int (*p)(int,int) = &MAX;
+//	int a = 10;
+//	int b = 20;
+//	int d;
+//	d = p(a, b);//与直接调用函数等价
+//	printf("%d\n", d);
+//	return 0;
+//}
 
 

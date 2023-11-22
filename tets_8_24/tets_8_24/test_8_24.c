@@ -120,22 +120,22 @@
 //但是有两个例外:
 //1.sizeof（数组名），这里的数组名表示整个数组，计算的是整个数组的大小，单位是字节
 //2.&数组名，这里的数组名表示整个数组，取出的是整个数组的地址
-//int main()
-//{
-//    int arr[10] = { 1,2,3,4,5 };
-//    printf("%p\n", arr);//arr就是首元素地址
-//    printf("%p\n", arr+1);
-//
-//    printf("%p\n", &arr[0]);//首元素的地址
-//    printf("%p\n", &arr[0]+1);
-//
-//    printf("%p\n", &arr);//数组的地址
-//    printf("%p\n", &arr+1);//这个比上面的多了40，因为数组的长度为40
-//    //int n = sizeof(arr);
-//    //printf("%d\n", n);//40
-//    //输出结果
-//    return 0;
-//}
+int main()
+{
+    char arr[10] = { 1,2,3,4,5 };
+    printf("%p\n", arr);//arr就是首元素地址
+    printf("%p\n", arr+1);
+
+    printf("%p\n", &arr[0]);//首元素的地址
+    printf("%p\n", &arr[0]+1);
+
+    printf("%p\n", &arr);//数组的地址
+    printf("%p\n", &arr+1);//这个比上面的多了40，因为数组的长度为40
+    //int n = sizeof(arr);
+    //printf("%d\n", n);//40
+    //输出结果
+    return 0;
+}
 
 //int main()
 //{

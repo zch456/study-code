@@ -23,7 +23,7 @@
 //{
 //	int a = 0;
 //	int year, month, day;
-//	scanf("%d,%d,%d", &year, &month, &day);
+//	scanf("%d%d%d", &year, &month, &day);
 //	if (is_leap_year(year))
 //	{
 //		switch (month)
@@ -139,8 +139,8 @@
 //	return 0;
 //}
 
-////打印九九乘法表
-//
+//打印九九乘法表
+
 //int main()
 //{
 //	int i = 0;
@@ -155,5 +155,69 @@
 //	}
 //	return 0;
 //}
+
+//int main()
+//{
+//	int a = 0, b = 0, k;
+//	float sum = 0;
+//	float  c = 0;
+//	scanf("%d", &k);
+//	for (int i = 0; i <= k; i++)
+//	{
+//		a += i;
+//	}
+//	for (int i = 0; i <= k; i++)
+//	{
+//		b += i * i;
+//	}
+//	for (int i = 1; i <= k; i++)
+//	{
+//		c += (1 / i);
+//	}
+//	sum = a + b + c;
+//	printf("%f", sum);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char c = 0;
+//	c = getchar();
+//	while (c != EOF)
+//	{
+//		putchar(c);
+//		c = getchar();
+//	}
+//	return 0;
+//}
+#include<string.h>
+
+//int main()
+//{
+//	int a = 0;
+//	int b = 10000;
+//	int count = 0;
+//	scanf("%d", &a);
+//	int a1 = a;
+//	while (a1  > 0)
+//	{
+//			count++;
+//			a1 /= 10;
+//	}
+//	printf("%d\n", count);
+//	for (int i = 0; i < count; i++)
+//	{
+//		printf("%d ", a / b);
+//		b = b / 10;
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	int* p = NULL;
+	return 0;
+}
+
 
 
